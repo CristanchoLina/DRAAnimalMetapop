@@ -1,5 +1,5 @@
 # Supplementary material for the article
-# *Dynamic resource allocation for controlling pathogen spread on a large animal metapopulation network* Cristancho-Fajardo, Ezanno, Vergu.
+# *Dynamic resource allocation for controlling pathogen spread on a large animal metapopulation network* (Cristancho-Fajardo L., Ezanno P., Vergu E.).
 Python Simulation Code  for the article *Integrative modelling of pathogen spread through animal trade by accounting for farmers’ control decisions* Cristancho Fajardo, Ezanno, Vergu.
 
 - The Epi_allocation_function.py script gathers the main functions used in the generation of the simulated epidemic, and in allocation decision data presented in the article.
