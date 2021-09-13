@@ -2,10 +2,23 @@
 # *Dynamic resource allocation for controlling pathogen spread on a large animal metapopulation network* (Cristancho-Fajardo L., Ezanno P., Vergu E.).
 Python Simulation Code  for the article *Integrative modelling of pathogen spread through animal trade by accounting for farmers’ control decisions* Cristancho Fajardo, Ezanno, Vergu.
 
-- The Epi_allocation_function.py script gathers the main functions used in the generation of the simulated epidemic, and in allocation decision data presented in the article.
+
+
 - The fixed_parameters folder contains the fixed simulation setting, fixed network structure and fixed demographic parameters. As well as the notebook on their generation. 
-- The Vignette_vaccination.ipynb is a jupyter-notebook in which after the model's parameters are initially established, we simulate the spread of the disease and the allocation decisions concern a protective vaccine.
-- The Vignette_treatment.ipynb is a jupyter-notebook in which after the model's parameters are initially established, we simulate the spread of the disease and the allocation decisions concern a protective vaccine.
+
+- Vaccination folder, contains:
+  - The Epi_vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
+  - Simulation_vaccination.py is the script that generates the simulated epidemic dynamics under vaccination.
+  - Simulated datasets for vaccination with $b_fix = 25\%$ of initial total population (quantity of resource). Endemic and epidemic scenarios.
+  - Simulated dataset of percolation experiments for vaccination. Endemic and epidemic scenarios.
+  - The Vignette_vaccination.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern vaccination.
+  
+- Treatment folder, contains:
+  - The Epi_treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
+  - Simulation_treatment.py is the script that generates the simulated epidemic dynamics under treatment.
+  - Simulations datasets for treatment with $b_fix = 25$ herds (quantity of resource). Endemic and epidemic scenarios.
+  - Simulated dataset of percolation experiments for treatment. Endemic and epidemic scenarios.
+  - The Vignette_treatment.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern the treatment.
 
 Copyright or © or Copr. [INRAE]
 
