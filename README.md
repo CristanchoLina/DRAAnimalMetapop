@@ -7,14 +7,14 @@ Python Simulation Code and simulated datasets  for the article Dynamic resource 
 - Vaccination folder, contains:
   - The Epi_vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
   - Simulation_vaccination.py is the script that generates the simulated epidemic dynamics under vaccination.
-  - Simulated datasets for vaccination with $b_fix = 25\%$ of initial total population (quantity of resource). Endemic and epidemic scenarios.
+  - Simulated datasets for vaccination with b_fix = 25\% of initial total population (quantity of resource). Endemic and epidemic scenarios.
   - Simulated dataset of percolation experiments for vaccination. Endemic and epidemic scenarios.
   - The Vignette_vaccination.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern vaccination.
   
 - Treatment folder, contains:
   - The Epi_treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
   - Simulation_treatment.py is the script that generates the simulated epidemic dynamics under treatment.
-  - Simulations datasets for treatment with $b_fix = 25$ herds (quantity of resource). Endemic and epidemic scenarios.
+  - Simulations datasets for treatment with b_fix = 25 herds (quantity of resource). Endemic and epidemic scenarios.
   - Simulated dataset of percolation experiments for treatment. Endemic and epidemic scenarios.
   - The Vignette_treatment.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern the treatment.
 
