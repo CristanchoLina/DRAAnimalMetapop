@@ -7,7 +7,7 @@ Python Simulation Code and simulated datasets  for the article Dynamic resource 
 - The vaccination folder, contains:
 
   - The dynamic folder, contains:
-        - The score_list folder: contains the text files with the names of the score functions to be tested. As well as the notebook on their generation. 
+    -   The score_list folder: contains the text files with the names of the score functions to be tested. As well as the notebook on their generation. 
         - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
         - launcher_vacc_endemicdynamic.py is the script that generates the simulated dynamics under vaccination, in the endemic scenario.
         - launcher_vacc_epidemicdynamic.py is the script that generates the simulated dynamics under vaccination, in the epidemic scenario.
