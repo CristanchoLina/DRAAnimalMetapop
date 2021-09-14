@@ -4,19 +4,52 @@ Python Simulation Code and simulated datasets  for the article Dynamic resource 
 
 - The fixed_parameters folder contains the fixed simulation setting, fixed network structure and fixed demographic parameters. As well as the notebook on their generation. 
 
-- Vaccination folder, contains:
-  - The Epi_vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
-  - Simulation_vaccination.py is the script that generates the simulated epidemic dynamics under vaccination.
-  - Simulated datasets for vaccination with b_fix = 25\% of initial total population (quantity of resource). Endemic and epidemic scenarios.
-  - Simulated dataset of percolation experiments for vaccination. Endemic and epidemic scenarios.
-  - The Vignette_vaccination.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern vaccination.
-  
-- Treatment folder, contains:
-  - The Epi_treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
-  - Simulation_treatment.py is the script that generates the simulated epidemic dynamics under treatment.
-  - Simulations datasets for treatment with b_fix = 25 herds (quantity of resource). Endemic and epidemic scenarios.
-  - Simulated dataset of percolation experiments for treatment. Endemic and epidemic scenarios.
-  - The Vignette_treatment.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern the treatment.
+- The vaccination folder, contains:
+
+  - The dynamic folder, contains:
+        - The score_list folder: contains the text files with the names of the score functions to be tested. As well as the notebook on their generation. 
+        - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
+        - launcher_vacc_endemicdynamic.py is the script that generates the simulated dynamics under vaccination, in the endemic scenario.
+        - launcher_vacc_epidemicdynamic.py is the script that generates the simulated dynamics under vaccination, in the epidemic scenario.
+        - simulated_data_vaccend_dynamic is the folder that contains the simulated datasets for vaccination with b_fix = 25\% of initial total population, in the           endemic scenario.
+        - simulated_data_vaccepi_dynamic is the folder that contains the simulated datasets for vaccination with b_fix = 25\% of initial total population, in the           epidemic scenario.
+  - The percolation folder, contains:
+        - The score_budget_list folder: contains the text files with the combinations of the score functions and quantity of resource (b_fix) to be tested. 
+          As well as the notebook on their generation. 
+        - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
+        - launcher_percolation_vaccendemic.py is the script that generates the percolation experiments for vaccination, in the endemic scenario.
+        - launcher_percolation_vaccepidemic.py is the script that generates the percolation experiments for vaccination, in the epidemic scenario.
+        - percolation_vacc_endemic_data is the folder that contains the simulated datasets in the percolation experiments for vaccination,
+          in the endemic scenario.
+        - percolation_vacc_epidemic_data is the folder that contains the simulated datasets in the percolation experiments for vaccination,
+          in the epidemic scenario.
+          
+  - The plots_vaccination.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern
+    vaccination.
+
+
+- The treatment folder, contains:
+
+  - The dynamic folder, contains:
+        - The score_list folder: contains the text files with the names of the score functions to be tested. As well as the notebook on their generation. 
+        - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
+        - launcher_treatment_endemic_dynamic.py is the script that generates the simulated dynamics under treatment, in the endemic scenario.
+        - launcher_treatment_epidemic_dynamic.py is the script that generates the simulated dynamics under treatment, in the epidemic scenario.
+        - simulated_data_treatend_dynamic is the folder that contains the simulated datasets for treatment with b_fix = 25 herds, in the endemic scenario.
+        - simulated_data_treatepi_dynamic is the folder that contains the simulated datasets for treatment with b_fix = 25 herds, in the epidemic scenario.
+  - The percolation folder, contains:
+        - The score_budget_list folder: contains the text files with the combinations of the score functions and quantity of resource (b_fix) to be tested. 
+          As well as the notebook on their generation. 
+        - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
+        - launcher_percolation_treatment_endemic.py is the script that generates the percolation experiments for treatment, in the endemic scenario.
+        - launcher_percolation_treatment_epidemic.py is the script that generates the percolation experiments for treatment, in the epidemic scenario.
+        - percolation_treatment_endemic_data is the folder that contains the simulated datasets in the percolation experiments for treatment,
+          in the endemic scenario.
+        - percolation_treatment_epidemic_data is the folder that contains the simulated datasets in the percolation experiments for treatment,
+          in the epidemic scenario.
+          
+  - The plots_treatment.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern
+    treatment.
 
 Copyright or © or Copr. [INRAE]
 
