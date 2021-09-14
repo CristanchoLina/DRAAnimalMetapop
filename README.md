@@ -23,7 +23,7 @@ Python Simulation Code and simulated datasets  for the article Dynamic resource 
       in the endemic scenario.
     - percolation_vacc_epidemic_data is the folder that contains the simulated datasets in the percolation experiments for vaccination,
       in the epidemic scenario.
-  - *The plots_vaccination.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern
+  - # The plots_vaccination.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern
     vaccination*.
 
 
@@ -46,7 +46,7 @@ Python Simulation Code and simulated datasets  for the article Dynamic resource 
         in the endemic scenario.
       - percolation_treatment_epidemic_data is the folder that contains the simulated datasets in the percolation experiments for treatment,
         in the epidemic scenario.
-  - *The plots_treatment.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern
+  - # *The plots_treatment.ipynb is a jupyter-notebook that reads the simulated datasets and generates the figures presented in the article that concern
     treatment*.
 
 Copyright or © or Copr. [INRAE]
