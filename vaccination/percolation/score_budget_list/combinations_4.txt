@@ -1,0 +1,1 @@
+susceptible_proportion 0.15
