@@ -19,7 +19,8 @@ Python Simulation Code for generating the data and the figures in the article Dy
     - The score_budget_list folder: contains the text files with the combinations of the score functions and quantity of resource (b_fix) to be tested. 
       As well as the notebook on their generation. 
     - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
-    - **launcher_percolation_vaccendemic.py** is the script that generates the percolation experiments for vaccination, in the endemic scenario.
+    - percolation_vaccendemic.py is the script that generates the percolation experiments for vaccination according to a given combination of scoring function - b_fix, in the endemic scenario.
+    - **launcher_percolation_vaccendemic.py** is the script that generates 50 runs of percolation experiments for vaccination in the endemic scenario, for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring-b_fix combination according to the score_budget_list folder).
     - percolation_vacc_endemic_data: folder that will contain simulated data once the launcher_percolation_vaccendemic.py is run.
     
 - The treatment folder, contains:
@@ -37,22 +38,21 @@ Python Simulation Code for generating the data and the figures in the article Dy
       - The score_budget_list folder: contains the text files with the combinations of the score functions and quantity of resource (b_fix) to be tested. 
         As well as the notebook on their generation. 
       - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
-      - **launcher_percolation_treatment_endemic.py** is the script that generates the percolation experiments for treatment, in the endemic scenario.
-      - percolation_treatment_endemic_data: folder that will contain simulated data once the launcher_percolation_treatment_endemic.py is run.
-    
+      - percolation_treatment_endemic.py is the script that generates the percolation experiments for treatment according to a given combination of scoring function - b_fix, in the endemic scenario.
+      - **launcher_percolation_treatment_endemic.py** is the script that generates 50 runs of percolation experiments for treatment in the endemic scenario, for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring-b_fix combination according to the score_budget_list folder).
+      - 
 -  **The plots_article.ipynb is a jupyter-notebook that reads the simulated datasets (once the launcher scripts are run) and generates the figures presented in the main text of the article**.
 
 ###################################################################################################################
 
-SLURM queries to run in parallel the launcher scripts for all scores, and for all score-budget combinations:
+*SLURM queries to run in parallel the launcher scripts for all scores, and for all score-budget combinations:*
 
-sbatch --array 1-29 vaccination/dynamic/launcher_vacc_endemicdynamic.sh
-sbatch --array 1-29 vaccination/dynamic/launcher_vacc_epidemicdynamic.sh
-sbatch --array 1-29 treatment/dynamic/launcher_treatment_endemicdynamic.sh
-sbatch --array 1-29 treatment/dynamic/launcher_treatment_epidemicdynamic.sh
-sbatch --array 1-156 vaccination/percolation/launcher_percolation_treatment_endemic.sh
-sbatch --array 1-180 treatment/percolation/launcher_percolation_treatment_endemic.sh
-
+- sbatch --array 1-29 vaccination/dynamic/launcher_vacc_endemicdynamic.sh
+- sbatch --array 1-29 vaccination/dynamic/launcher_vacc_epidemicdynamic.sh
+- sbatch --array 1-29 treatment/dynamic/launcher_treatment_endemicdynamic.sh
+- sbatch --array 1-29 treatment/dynamic/launcher_treatment_epidemicdynamic.sh
+- sbatch --array 1-156 vaccination/percolation/launcher_percolation_treatment_endemic.sh
+- sbatch --array 1-180 treatment/percolation/launcher_percolation_treatment_endemic.sh
 
 ###################################################################################################################
 
