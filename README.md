@@ -9,30 +9,30 @@ Python Simulation Code for generating the data and the figures in the article Dy
   - The dynamic folder, contains:
     - The score_list folder: contains the text files with the names of the score functions to be tested. As well as the notebook on their generation. 
     - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
-    - launcher_vacc_endemicdynamic.py is the script that generates the simulated dynamics under vaccination according to each scoring function in the score_list folder, with b_fix = 25\% of initial total population, in the endemic scenario.
-    - launcher_vacc_epidemicdynamic.py is the script that generates the simulated dynamics under vaccination according to each scoring function in the score_list folder, with b_fix = 25\% of initial total population, in the epidemic scenario.
+    - **launcher_vacc_endemicdynamic.py** is the script that generates the simulated dynamics under vaccination according to each scoring function in the score_list folder, with b_fix = 25\% of initial total population, in the endemic scenario.
+    - **launcher_vacc_epidemicdynamic.py** is the script that generates the simulated dynamics under vaccination according to each scoring function in the score_list folder, with b_fix = 25\% of initial total population, in the epidemic scenario.
   - The percolation folder, contains:
     - The score_budget_list folder: contains the text files with the combinations of the score functions and quantity of resource (b_fix) to be tested. 
       As well as the notebook on their generation. 
     - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
-    - launcher_percolation_vaccendemic.py is the script that generates the percolation experiments for vaccination, in the endemic scenario.
-    - launcher_percolation_vaccepidemic.py is the script that generates the percolation experiments for vaccination, in the epidemic scenario.
+    - **launcher_percolation_vaccendemic.py** is the script that generates the percolation experiments for vaccination, in the endemic scenario.
+    - **launcher_percolation_vaccepidemic.py** is the script that generates the percolation experiments for vaccination, in the epidemic scenario.
 
 - The treatment folder, contains:
 
   - The dynamic folder, contains:
       - The score_list folder: contains the text files with the names of the score functions to be tested. As well as the notebook on their generation. 
       - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
-      - launcher_treatment_endemic_dynamic.py is the script that generates the simulated dynamics under treatment according to each scoring function in the score_list folder, with b_fix = 25 herds, in the endemic scenario.
-      - launcher_treatment_epidemic_dynamic.py is the script that generates the simulated dynamics under treatment according to each scoring function in the score_list folder, with b_fix = 25 herds, in the epidemic scenario.
+      - **launcher_treatment_endemic_dynamic.py** is the script that generates the simulated dynamics under treatment according to each scoring function in the score_list folder, with b_fix = 25 herds, in the endemic scenario.
+      - **launcher_treatment_epidemic_dynamic.py** is the script that generates the simulated dynamics under treatment according to each scoring function in the score_list folder, with b_fix = 25 herds, in the epidemic scenario.
   - The percolation folder, contains:
       - The score_budget_list folder: contains the text files with the combinations of the score functions and quantity of resource (b_fix) to be tested. 
         As well as the notebook on their generation. 
       - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
-      - launcher_percolation_treatment_endemic.py is the script that generates the percolation experiments for treatment, in the endemic scenario.
-      - launcher_percolation_treatment_epidemic.py is the script that generates the percolation experiments for treatment, in the epidemic scenario.
+      - **launcher_percolation_treatment_endemic.py** is the script that generates the percolation experiments for treatment, in the endemic scenario.
+      - **launcher_percolation_treatment_epidemic.py** is the script that generates the percolation experiments for treatment, in the epidemic scenario.
 
--  **The plots_article.ipynb is a jupyter-notebook that reads the simulated datasets (once the 4 launcher scripts are run) and generates the figures presented in the main text of the article**.
+-  **The plots_article.ipynb is a jupyter-notebook that reads the simulated datasets (once the 8 launcher scripts are run) and generates the figures presented in the main text of the article**.
 
 
 
