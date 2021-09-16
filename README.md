@@ -47,12 +47,12 @@ Python Simulation Code for generating the data and the figures in the article Dy
 
 *SLURM queries to run in parallel the launcher scripts for all scores, and for all score-budget combinations:*
 
-- sbatch --array 1-29 vaccination/dynamic/launcher_vacc_endemicdynamic.sh
-- sbatch --array 1-29 vaccination/dynamic/launcher_vacc_epidemicdynamic.sh
-- sbatch --array 1-29 treatment/dynamic/launcher_treatment_endemicdynamic.sh
-- sbatch --array 1-29 treatment/dynamic/launcher_treatment_epidemicdynamic.sh
-- sbatch --array 1-156 vaccination/percolation/launcher_percolation_treatment_endemic.sh
-- sbatch --array 1-180 treatment/percolation/launcher_percolation_treatment_endemic.sh
+- sbatch --array 1-29 DRAAnimalMetapop/vaccination/dynamic/launcher_vacc_endemicdynamic.sh
+- sbatch --array 1-29 DRAAnimalMetapop/vaccination/dynamic/launcher_vacc_epidemicdynamic.sh
+- sbatch --array 1-29 DRAAnimalMetapop/treatment/dynamic/launcher_treatment_endemicdynamic.sh
+- sbatch --array 1-29 DRAAnimalMetapop/treatment/dynamic/launcher_treatment_epidemicdynamic.sh
+- sbatch --array 1-156 DRAAnimalMetapop/vaccination/percolation/launcher_percolation_treatment_endemic.sh
+- sbatch --array 1-180 DRAAnimalMetapop/treatment/percolation/launcher_percolation_treatment_endemic.sh
 
 ###################################################################################################################
 
