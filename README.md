@@ -9,8 +9,10 @@ Python Simulation Code for generating the data and the figures in the article Dy
   - The dynamic folder, contains:
     - The score_list folder: contains the text files with the names of the score functions to be tested. As well as the notebook on their generation. 
     - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
-    - **launcher_vacc_endemicdynamic.py** is the script that generates the simulated dynamics under vaccination according to each scoring function in the score_list folder, with b_fix = 25\% of initial total population, in the endemic scenario.
-    - **launcher_vacc_epidemicdynamic.py** is the script that generates the simulated dynamics under vaccination according to each scoring function in the score_list folder, with b_fix = 25\% of initial total population, in the epidemic scenario.
+    - vacc_endemicdynamic.py is the script that generates the simulated dynamics under vaccination according to a given scoring function with b_fix = 25\% of initial total population, in the endemic scenario.
+    - vacc_epidemicdynamic.py is the script that generates the simulated dynamics under vaccination according to a given scoring function with b_fix = 25\% of initial total population, in the epidemic scenario.
+    - *launcher_vacc_endemicdynamic.sh**: script shell that launches 50 runs of vacc_endemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder).
+    - *launcher_vacc_epidemicdynamic.sh**: script shell that launches 50 runs of vacc_epidemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder). 
     - simulated_data_vaccend_dynamics: folder that will contain simulated data once the launcher_vacc_endemicdynamic.py is run.
     - simulated_data_vaccepi_dynamics: folder that will contain simulated data once the launcher_vacc_epidemicdynamic.py is run.
   - The percolation folder, contains:
@@ -27,6 +29,8 @@ Python Simulation Code for generating the data and the figures in the article Dy
       - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
       - **launcher_treatment_endemic_dynamic.py** is the script that generates the simulated dynamics under treatment according to each scoring function in the score_list folder, with b_fix = 25 herds, in the endemic scenario.
       - **launcher_treatment_epidemic_dynamic.py** is the script that generates the simulated dynamics under treatment according to each scoring function in the score_list folder, with b_fix = 25 herds, in the epidemic scenario.
+    - *launcher_treatment_endemicdynamic.sh**: script shell that launches 50 runs of vacc_endemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder).
+    - *launcher_treatment_epidemicdynamic.sh**: script shell that launches 50 runs of vacc_epidemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder). 
     - simulated_data_treatend_dynamics: folder that will contain simulated data once the launcher_treatment_endemicdynamic.py is run.
     - simulated_data_treatepi_dynamics: folder that will contain simulated data once the launcher_treatment_epidemicdynamic.py is run.
   - The percolation folder, contains:
@@ -38,8 +42,19 @@ Python Simulation Code for generating the data and the figures in the article Dy
     
 -  **The plots_article.ipynb is a jupyter-notebook that reads the simulated datasets (once the launcher scripts are run) and generates the figures presented in the main text of the article**.
 
+###################################################################################################################
+
+SLURM queries to run in parallel the launcher scripts for all scores, and for all score-budget combinations:
+
+sbatch --array 1-29 vaccination/dynamic/launcher_vacc_endemicdynamic.sh
+sbatch --array 1-29 vaccination/dynamic/launcher_vacc_epidemicdynamic.sh
+sbatch --array 1-29 treatment/dynamic/launcher_treatment_endemicdynamic.sh
+sbatch --array 1-29 treatment/dynamic/launcher_treatment_epidemicdynamic.sh
+sbatch --array 1-156 vaccination/percolation/launcher_percolation_treatment_endemic.sh
+sbatch --array 1-180 treatment/percolation/launcher_percolation_treatment_endemic.sh
 
 
+###################################################################################################################
 
 
 Copyright or © or Copr. [INRAE]
