@@ -20,8 +20,8 @@ Python Simulation Code for generating the data and the figures in the article Dy
       As well as the notebook on their generation. 
     - The vaccination_functions.py script gathers the main functions used in the generation of the simulated epidemic under vaccination allocation
     - percolation_vaccendemic.py is the script that generates the percolation experiments for vaccination according to a given combination of scoring function - b_fix, in the endemic scenario.
-    - **launcher_percolation_vaccendemic.py** is the script that generates 50 runs of percolation experiments for vaccination in the endemic scenario, for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring-b_fix combination according to the score_budget_list folder).
-    - percolation_vacc_endemic_data: folder that will contain simulated data once the launcher_percolation_vaccendemic.py is run.
+    - **launcher_percolation_vaccendemic.sh** script shell that generates 50 runs of percolation_vaccendemic.py, for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring-b_fix combination according to the score_budget_list folder).
+    - percolation_vacc_endemic_data: folder that will contain simulated data once the launcher_percolation_vaccendemic.sh is run.
     
 - The treatment folder, contains:
 
@@ -30,22 +30,21 @@ Python Simulation Code for generating the data and the figures in the article Dy
       - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
       - treatment_endemic_dynamic.py is the script that generates the simulated dynamics under treatment according to a given scoring function with b_fix = 25 herds, in the endemic scenario.
       - treatment_epidemic_dynamic.py is the script that generates the simulated dynamics under treatment according to a given scoring function with b_fix = 25 herds, in the epidemic scenario.
-    - **launcher_treatment_endemicdynamic.sh**: script shell that launches 50 runs of vacc_endemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder).
-    - **launcher_treatment_epidemicdynamic.sh**: script shell that launches 50 runs of vacc_epidemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder). 
-    - simulated_data_treatend_dynamics: folder that will contain simulated data once the launcher_treatment_endemicdynamic.py is run.
-    - simulated_data_treatepi_dynamics: folder that will contain simulated data once the launcher_treatment_epidemicdynamic.py is run.
+    - **launcher_treatment_endemicdynamic.sh**: script shell that launches 50 runs of treatment_endemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder).
+    - **launcher_treatment_epidemicdynamic.sh**: script shell that launches 50 runs of treatment_epidemicdynamic.py for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring function according to the score_list folder). 
+    - simulated_data_treatend_dynamics: folder that will contain simulated data once the launcher_treatment_endemicdynamic.sh is run.
+    - simulated_data_treatepi_dynamics: folder that will contain simulated data once the launcher_treatment_epidemicdynamic.sh is run.
   - The percolation folder, contains:
       - The score_budget_list folder: contains the text files with the combinations of the score functions and quantity of resource (b_fix) to be tested. 
         As well as the notebook on their generation. 
       - The treatment_functions.py script gathers the main functions used in the generation of the simulated epidemic under treatment allocation
       - percolation_treatment_endemic.py is the script that generates the percolation experiments for treatment according to a given combination of scoring function - b_fix, in the endemic scenario.
-      - **launcher_percolation_treatment_endemic.py** is the script that generates 50 runs of percolation experiments for treatment in the endemic scenario, for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring-b_fix combination according to the score_budget_list folder).
-      - 
--  **The plots_article.ipynb is a jupyter-notebook that reads the simulated datasets (once the launcher scripts are run) and generates the figures presented in the main text of the article**.
+      - **launcher_percolation_treatment_endemic.py** script shell that launches 50 runs of percolation_treatment_endemic.py, for a given $SLURM_ARRAY_TASK_ID (which indicates the scoring-b_fix combination according to the score_budget_list folder).
+      -  percolation_treatment_endemic_data: folder that will contain simulated data once the launcher_percolation_treatment_endemic.sh is run.
+   
+-  **The plots_article.ipynb is a jupyter-notebook that reads the simulated datasets (once the launcher shell scripts are run) and generates the figures presented in the main text of the article**.
 
-###################################################################################################################
-
-*SLURM queries to run in parallel the launcher scripts for all scores, and for all score-budget combinations:*
+*SLURM queries to run the launcher scripts for all scores, and for all score-budget combinations:*
 
 - sbatch --array 1-29 DRAAnimalMetapop/vaccination/dynamic/launcher_vacc_endemicdynamic.sh
 - sbatch --array 1-29 DRAAnimalMetapop/vaccination/dynamic/launcher_vacc_epidemicdynamic.sh
@@ -54,7 +53,7 @@ Python Simulation Code for generating the data and the figures in the article Dy
 - sbatch --array 1-156 DRAAnimalMetapop/vaccination/percolation/launcher_percolation_treatment_endemic.sh
 - sbatch --array 1-180 DRAAnimalMetapop/treatment/percolation/launcher_percolation_treatment_endemic.sh
 
-###################################################################################################################
+######################################################
 
 
 Copyright or © or Copr. [INRAE]
