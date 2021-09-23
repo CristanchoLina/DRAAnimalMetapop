@@ -1,6 +1,6 @@
 # Supplementary material for the article
-# *Dynamic resource allocation for controlling pathogen spread on a large animal metapopulation network* (Cristancho-Fajardo L., Ezanno P., Vergu E.).
-Python Simulation Code for generating the data and the figures in the article Dynamic resource allocation for controlling pathogen spread on a large animal metapopulation network (Cristancho-Fajardo L., Ezanno P., Vergu E.):
+# *Dynamic resource allocation for controlling pathogen spread on a large metapopulation network* (Cristancho-Fajardo L., Ezanno P., Vergu E.).
+Python Simulation Code for generating the data and the figures in the article Dynamic resource allocation for controlling pathogen spread on a large metapopulation network (Cristancho-Fajardo L., Ezanno P., Vergu E.):
 
 - The fixed_parameters folder contains the fixed simulation setting, fixed network structure and fixed demographic parameters. As well as the notebook on their generation. 
 
